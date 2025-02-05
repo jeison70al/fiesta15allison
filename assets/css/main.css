@@ -583,8 +583,8 @@ input, select, textarea {
 		background-color: #a8d6ea;
 		border: 0;
 		cursor: pointer;
-		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/flores_Grupo01_B.webp");
+		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/");
+		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/flores_Grupo02_A.webp");
 		background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
 		-moz-transition: background-color 0.35s ease-in-out;
@@ -882,8 +882,21 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #ebe1c9;
+				background-color: #b9e1ee;
 				background-image: url("../../images/banner.jpg");
+				position: relative;
+			}
+
+			#main > section.one::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				 /*background-color: rgba(212, 240, 146, 0.799); El color #c9c080 con opacidad */
+				backdrop-filter: blur(-1px);
+				z-index: 0.05;
 			}
 
 			#main > section.two {
